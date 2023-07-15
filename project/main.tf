@@ -53,7 +53,7 @@ resource "azurerm_network_interface" "my_terraform_nic" {
 
   ip_configuration {
     name                          = "my_nic_configuration"
-    subnet_id                     = azurerm_subnet.my_terraform_subnet[count.index].id
+    subnet_id                     = azurerm_subnet.my_terraform_subnet.id
     private_ip_address_allocation = "Dynamic"
     #public_ip_address_id          = azurerm_public_ip.my_terraform_public_ip.id
   }
@@ -83,7 +83,8 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
 
   computer_name                   = "myvm"
   admin_username                  = "azureuser"
-  disable_password_authentication = true
+  admin_password                  = "password@768954"
+  disable_password_authentication = false
 
 }
 
