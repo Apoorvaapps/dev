@@ -1,1 +1,1 @@
-location = "centralindia"
+resource_group_location = "centralindia"
