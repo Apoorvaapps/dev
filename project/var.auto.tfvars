@@ -14,6 +14,7 @@ provider "azurerm" {
 variable "resource_group_location" {
    description = "Location of the resource group"
     type        = string 
+    default     = "centralindia"
 }
 
 variable "resource_group_name" {
