@@ -7,15 +7,7 @@ variable "resource_group_name" {
     description = "name of the resource group"
     type        = string
 }
-variable "vn_count" {
-    description = "Number of virtual network to provision."
-    type        = number
-}
 
-variable "subnet_count" {
-    description = "Number of subnet to provision."
-    type        = number
-}
 variable "instance_count" {
     description = "Number of instance to provision."
     type        = number
