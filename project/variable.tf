@@ -18,15 +18,28 @@ variable "databaseserver_count" {
     type        = number
 }
 
-variable "admin_username" {
+variable "vmadmin_username" {
   type        = string
   description = "The administrator username of the SQL logical server."
-  #default     = "azureadmin"
+  #default    = "vmuser123"
 }
 
-variable "admin_password" {
+variable "vmadmin_password" {
   type        = string
   description = "The administrator password of the SQL logical server."
   sensitive   = true
-  #default     = "password@123"
+  #default    = "password@768954"
+}
+
+variable "sqladmin_username" {
+  type        = string
+  description = "The administrator username of the SQL logical server."
+  #default     = "sqladmin123"
+}
+
+variable "sqladmin_password" {
+  type        = string
+  description = "The administrator password of the SQL logical server."
+  sensitive   = true
+  #default     = "password@14532"
 }

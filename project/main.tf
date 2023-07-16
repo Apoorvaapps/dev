@@ -82,8 +82,8 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
   }
 
   computer_name                   = "myvm"
-  admin_username                  = "azureuser"
-  admin_password                  = "password@768954"
+  admin_username                  = var.vmadmin_username
+  admin_password                  = var.vmadmin_password
   disable_password_authentication = false
 
 }
@@ -94,8 +94,8 @@ resource "azurerm_mssql_server" "server" {
   name                         = "sampledbserver657-${count.index + 1}"
   resource_group_name          = azurerm_resource_group.rg.name
   location                     = azurerm_resource_group.rg.location
-  administrator_login          = var.admin_username
-  administrator_login_password = var.admin_password
+  administrator_login          = var.sqladmin_username
+  administrator_login_password = var.sqladmin_password
   version                      = "12.0"
 }
 
